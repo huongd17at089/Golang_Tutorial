@@ -5,16 +5,26 @@ import (
 	"strconv"
 )
 
+/*summary
+- 3 way declare variable
+- cant redeclare but can shadow
+- all var must be used
+- 3 level scope
+- camelCase : internal
+- PascalCase : export
+*/
+
 //package lavel
 var g int = 123
 
-var(
+var (
 	name string = "name"
-	age int = 10
+	age  int    = 10
 )
 
 var shadow_var string = "1st"
-func main(){
+
+func main() {
 	fmt.Println(123)
 	//declaration :
 
@@ -48,18 +58,12 @@ func main(){
 
 	*/
 	// type conversions
-	j:= float32(123)
+	j := float32(123)
 	fmt.Println(j)
 	// convert num to string
 	var num int = 123
 	var s string = string(123)
 	fmt.Println(num, s)
 	s = strconv.Itoa(num)
-	/*summary
-	- 3 way declare variable
-	- cant redeclare but can shadow
-	- all var must be used
-	- 3 level scope
-	- camelCase
-*/
+
 }
