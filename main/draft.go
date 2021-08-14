@@ -1,6 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+func countZeroDigit(a int, b int) int {
+	count := 0
+	for i := a; i <= b; i++ {
+		temp := strconv.Itoa(i)
+		if strings.Contains(temp, "0") {
+			count = count + 1
+		}
+	}
+
+	return count
+}
 
 func main() {
 	//a := map[string]int{
@@ -23,25 +39,25 @@ func main() {
 	//fmt.Println(a2)
 	//fmt.Println(suba2)
 
-	var x *int
-	var y int
-	y = 0
-	x = &y
-
-	fmt.Println(x)
-	fmt.Println(&y)
-	fmt.Println(*x)
-	fmt.Println(y)
-	fmt.Println("___________________________")
-
-	*x = 1
-
-	fmt.Println(*x)
-	fmt.Println(y)
-	fmt.Println("___________________________")
-
-	y = 10
-	fmt.Println(*x)
-	fmt.Println(y)
-
+	//var x *int
+	//var y int
+	//y = 0
+	//x = &y
+	//
+	//fmt.Println(x)
+	//fmt.Println(&y)
+	//fmt.Println(*x)
+	//fmt.Println(y)
+	//fmt.Println("___________________________")
+	//
+	//*x = 1
+	//
+	//fmt.Println(*x)
+	//fmt.Println(y)
+	//fmt.Println("___________________________")
+	//
+	//y = 10
+	//fmt.Println(*x)
+	//fmt.Println(y)
+	fmt.Print(countZeroDigit(100, 110))
 }

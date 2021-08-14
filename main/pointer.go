@@ -8,17 +8,17 @@ summary
 - * : get value
 - & : get address - hex
 - call func by value, reference
+- slice, map contain internal pointers
 */
 
-func one(ptr *int) {
-	*ptr = 1
-}
-
-func zero(num int) {
-	num = 0
-}
-
 func main() {
+
+	aa := 100
+	bb := 200
+	fmt.Println(aa, bb) // 100 200
+	aa = 300
+	fmt.Println(aa, bb) // 300 200
+
 	var x *int //declare
 	var y int
 	y = 0
@@ -54,4 +54,23 @@ func main() {
 	one(&b)
 	fmt.Println(b) // 1
 
+	var ms *myStruct
+	fmt.Println(ms) // nil
+	ms = new(myStruct)
+	fmt.Println(ms) //{0}
+	ms.foo = 100
+	fmt.Println(ms.foo) // 100
+
+}
+
+func one(ptr *int) {
+	*ptr = 1
+}
+
+func zero(num int) {
+	num = 0
+}
+
+type myStruct struct {
+	foo int
 }
