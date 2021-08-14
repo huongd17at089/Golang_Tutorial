@@ -10,6 +10,14 @@ summary
 - call func by value, reference
 */
 
+func one(ptr *int) {
+	*ptr = 1
+}
+
+func zero(num int) {
+	num = 0
+}
+
 func main() {
 	var x *int //declare
 	var y int
@@ -46,12 +54,4 @@ func main() {
 	one(&b)
 	fmt.Println(b) // 1
 
-}
-
-func one(ptr *int) {
-	*ptr = 1
-}
-
-func zero(num int) {
-	num = 0
 }
