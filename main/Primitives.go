@@ -26,7 +26,7 @@ func main() {
 	// uint8 unit16 uint32
 	a := 10            // int64
 	b := 3             // int64
-	fmt.Println(a + b) // - * / %
+	fmt.Println(a + b) // + - * / %
 	var c int8 = 11
 	//d := a+c // error
 	fmt.Println(a + int(c))

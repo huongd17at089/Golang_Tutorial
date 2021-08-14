@@ -101,15 +101,15 @@ func main() {
 		fmt.Println(3)
 	}
 
-	var i interface{} = 1
-	switch i.(type) {
-	case int:
-		fmt.Println("int")
-		//.....
-	case [2]int:
-		fmt.Println("ok")
-	default:
-		fmt.Println("string")
-	}
+	//var i interface{} = 1
+	//switch i.(type) {
+	//case int:
+	//	fmt.Println("int")
+	//	//.....
+	//case [2]int:
+	//	fmt.Println("ok")
+	//default:
+	//	fmt.Println("string")
+	//}
 
 }

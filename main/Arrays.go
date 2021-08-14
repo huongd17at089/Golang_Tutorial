@@ -19,7 +19,7 @@ Slice
 */
 
 func main() {
-	//array fix size
+	//array fixed size
 	//create
 	arr := [3]int{1, 2, 3} //size = 3
 	//arr1 := [...] int{1,2,3}
@@ -57,6 +57,11 @@ func main() {
 	hihi := append(hi[:2], hi[3:]...)
 	fmt.Println(hihi) // 1 2 4 4
 	fmt.Println(hi)   // 1 2 4 4 4 5 6
+
+	slice1 := []int{1, 2, 3}
+	slice2 := make([]int, 2)
+	copy(slice2, slice1)
+	fmt.Println(slice1, slice2) // slice1 : 1,2,3  slice2 : 1,2
 	// work with
 	a1 := []int{1, 2, 3, 4, 5}
 	b1 := a1

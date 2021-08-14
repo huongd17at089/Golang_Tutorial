@@ -19,32 +19,33 @@ struct
 - no inheritance
 - can embeding
 - tags
- */
+*/
 
 type Persion struct {
 	Name string //'required max: "10"'
-	Age int
-	Abc []int
+	Age  int
+	Abc  []int
 }
 
 // embeding
 
 type Doctor struct {
-	Persion //composition relationship = has a
+	Persion  //composition relationship = has a
 	Hospital string
 }
-func main(){
-//map
+
+func main() {
+	//map
 	//create
 	m := map[string]int{
-		"hanoi" : 1,
-		"vn" : 2,
+		"hanoi": 1,
+		"vn":    2,
 	}
 	// m := map[[]int]string{} error
 	mep := map[[3]int]string{}
 	fmt.Println(m, mep)
 	fmt.Println(m["hanoi"]) // 1
-	m["HCM"] = 3 // add key
+	m["HCM"] = 3            // add key
 	pop, ok := m["hanoi"]
 	fmt.Println(pop, ok) // 1, true = key in map
 	//buil in
@@ -53,34 +54,34 @@ func main(){
 	makemap := make(map[string]int)
 	makemap = m
 	fmt.Println(makemap)
-	//maniputation
+	//manipulation
 	a := map[string]int{
-		"hanoi" : 1,
-		"vn" : 2,
+		"hanoi": 1,
+		"vn":    2,
 	}
 	b := a
 	delete(b, "vn")
 	fmt.Println(b) // hanoi :1
 	fmt.Println(a) // hanoi : 1
 
-//struct
+	//struct
 	//create
 	persion := Persion{
 		Name: "hihi",
-		Age: 22,
-		Abc: []int{1,2,3},
+		Age:  22,
+		Abc:  []int{1, 2, 3},
 	}
 	fmt.Print(persion)
 	fmt.Println(persion.Age)
 
 	doctor := struct {
 		name string
-	}{name : "hu"}
+	}{name: "hu"}
 	fmt.Println(doctor)
 	other := doctor
 	other.name = "hi"
 	fmt.Println(doctor.name) // hu
-	fmt.Println(other.name) //hi
+	fmt.Println(other.name)  //hi
 
 	otherx := &doctor
 	fmt.Println(otherx)
@@ -92,8 +93,8 @@ func main(){
 	d.Hospital = "lala"
 	fmt.Println(d.Name)
 	//tags
-/*
+	/*
 
- */
+	 */
 
 }

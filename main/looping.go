@@ -29,9 +29,7 @@ func main() {
 
 	}
 
-	for i < 5 { // while loop
-
-	}
+	//exitting early
 
 	for { //inf loop
 		if i == 10 {
@@ -53,6 +51,7 @@ loop: //label
 		}
 	}
 
+	//lopping through collection
 	//slide-array-map-string-channel
 	s := []int{1, 2, 3}
 	fmt.Println(s)
@@ -61,8 +60,7 @@ loop: //label
 	}
 
 	for _, v := range s {
-		fmt.Println(v) // index - value
+		fmt.Println(v) //  value
 	}
-	//exitting early
-	//lopping through collection
+
 }
